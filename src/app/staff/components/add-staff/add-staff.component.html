@@ -1,0 +1,168 @@
+<h1 mat-dialog-title>Add new staff</h1>
+
+<mat-dialog-content>
+  <mat-horizontal-stepper [formGroup]="newStaffForm">
+
+    <mat-step fxLayout="column"  fxLayoutGap="15px" label="Basic info" formGroupName="basicInfo">
+      <div fxFlex="35px"></div>
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+
+        <mat-form-field fxFlex.gt-xs="30%" appearance="outline">
+          <mat-label>Staff ID</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field fxFlex.gt-xs="70%" appearance="outline">
+          <mat-label>email</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+        <mat-form-field fxFlex.gt-xs="50%" appearance="outline">
+          <mat-label>First name</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field fxFlex.gt-xs="50%" appearance="outline">
+          <mat-label>Last name</mat-label>
+          <input matInput>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+        <mat-form-field fxFlex.gt-xs="40%" appearance="outline">
+          <mat-label>gender</mat-label>
+          <mat-select>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxFlex.gt-xs="60%" appearance="outline">
+          <mat-label>Date of birth</mat-label>
+          <input type="date" matInput>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+
+      </div>
+    </mat-step>
+    <!--<mat-step fxLayout="column"  fxLayoutGap="15px" label="Contact">
+
+    </mat-step>-->
+
+    <mat-step fxLayout="column"  fxLayoutGap="15px" label="Work info" formGroupName="workInfo">
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap.gt-xs="15px">
+
+        <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+          <mat-label>Department</mat-label>
+          <mat-select>
+            <mat-option>
+              Carbotage ervices
+            </mat-option>
+            <mat-option>
+              Financial services
+            </mat-option>
+            <mat-option>
+              Planning, research & data managementervices
+            </mat-option>
+            <mat-option>
+              Marine, safety and seafarers' standard
+            </mat-option>
+            <mat-option>
+              Shipping development
+            </mat-option>
+            <mat-option>
+              Marine environment management
+            </mat-option>
+            <mat-option>
+              Procurement
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" fxFlex.gt-xs="50%">
+            <mat-label>Unit</mat-label>
+            <mat-select>
+              <mat-option>
+                Health, safety and environment
+              </mat-option>
+              <mat-option>
+                ISPS
+              </mat-option>
+              <mat-option>
+                Marine accident investigation
+              </mat-option>
+              <mat-option>
+                Internal audit
+              </mat-option>
+              <mat-option>
+                SERVICOM
+              </mat-option>
+              <mat-option>
+                PR/Corporate communications
+              </mat-option>
+              <mat-option>
+                Protocol
+              </mat-option>
+              <mat-option>
+                Deep blue project
+              </mat-option>
+            </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+
+        <mat-form-field fxFlex.gt-xs="33%" appearance="outline">
+          <mat-label>Rank</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+        <mat-form-field fxFlex.gt-xs="33%" appearance="outline">
+          <mat-label>Grade level</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let grade of [7, 8, 9, 10, 11, 12, 13, 14, 15, 16]" value="grade">{{grade}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field fxFlex.gt-xs="33%" appearance="outline">
+          <mat-label>Location</mat-label>
+          <input matInput>
+        </mat-form-field>
+
+      </div>
+
+      <div fxLayout.xs="column" fxLayout.gt-xs="row" fxLayoutGap="15px">
+
+        <mat-form-field fxFlex="50%" appearance="outline">
+          <mat-label>Date of first appointment</mat-label>
+          <input matInput type="date">
+        </mat-form-field>
+
+        <mat-form-field fxFlex="50%" appearance="outline">
+          <mat-label>Date of present appointment</mat-label>
+          <input matInput type="date">
+        </mat-form-field>
+
+      </div>
+
+    </mat-step>
+
+    <mat-step fxLayout="column"  fxLayoutGap="15px" label="Memberships">
+
+
+    </mat-step>
+  </mat-horizontal-stepper>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <span fxFlex="1 1 auto"></span>
+  <button mat-flat-button color="accent" disabled>
+    Submit
+  </button>
+</mat-dialog-actions>

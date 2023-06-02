@@ -1,0 +1,19 @@
+<div fxLayout="column" style="height: 100%;">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      NIMASA app v1.0
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container fxFlex="100%">
+    <mat-sidenav fxLayout="column" #sidenav style="width: 240px;">
+      <button mat-button style="width: 100%;">Staff Management</button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
