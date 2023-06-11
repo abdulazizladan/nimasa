@@ -20,7 +20,7 @@ import { StaffListComponent } from './components/staff-list/staff-list.component
 import { StaffDetailsComponent } from './components/staff-details/staff-details.component';
 import { AddStaffComponent } from './components/add-staff/add-staff.component';
 import { StoreModule } from '@ngrx/store';
-import { staffReducer } from './store/staff.reducer';
+import { RegistryReducer } from './store/staff.reducer';
 
 
 @NgModule({
@@ -44,7 +44,7 @@ import { staffReducer } from './store/staff.reducer';
     MatDialogModule,
     MatStepperModule,
     StaffRoutingModule,
-    StoreModule.forFeature('staff', staffReducer)
+    StoreModule.forFeature('registry', RegistryReducer)
   ]
 })
 export class StaffModule { }

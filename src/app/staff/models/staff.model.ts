@@ -7,11 +7,11 @@ export class Staff{
     "firstName": string;
     "lastName": string;
     "dateOfBirth": Date;
-    "gradeLevel": number;
+    "grade": number;
     "stateOfOrigin": string;
     "gender": string;
   };
-  "workInfo": {
+  "workInfo"!: {
     "rank": string;
   "department": string;
   "unit": string;

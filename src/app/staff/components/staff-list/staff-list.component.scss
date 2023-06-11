@@ -1,0 +1,21 @@
+#header {
+  background-color: #666666;;
+  th{
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+    font-weight: normal;
+  }
+}
+
+tr:nth-child(odd) {
+  td{
+    border-right: 1px solid grey;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #ececec;
+  td{
+    border-right: 1px solid grey;
+  }
+}
